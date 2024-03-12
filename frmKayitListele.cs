@@ -25,6 +25,8 @@ namespace WinFormAppStudentRegistrationDB
 
 		private void button1_Click(object sender, EventArgs e)
 		{
+			try
+			{ 
 			if (dataGridView1.SelectedRows.Count > 0)
 			{
 				// Seçilen satırın indeksini al
@@ -36,12 +38,18 @@ namespace WinFormAppStudentRegistrationDB
 				{
 					// Veriyi sil
 					selectedRow.Row.Delete();
+				    MessageBox.Show("Silindi");
 
 					// Değişiklikleri kaydet
 					this.tbl_OgrenciTableAdapter.Update(this.okulDBDataSet.Tbl_Ogrenci);
 				}
-
 			}
 		}
+			catch (Exception)
+			{
+				MessageBox.Show("Hata");
+			}
+
+		}
+		}
 	}
-}
