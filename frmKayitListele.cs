@@ -25,7 +25,23 @@ namespace WinFormAppStudentRegistrationDB
 
 		private void button1_Click(object sender, EventArgs e)
 		{
-			
+			if (dataGridView1.SelectedRows.Count > 0)
+			{
+				// Seçilen satırın indeksini al
+				int rowIndex = dataGridView1.SelectedRows[0].Index;
+
+				// Seçilen satırdaki veriyi al
+				DataRowView selectedRow = dataGridView1.SelectedRows[0].DataBoundItem as DataRowView;
+				if (selectedRow != null)
+				{
+					// Veriyi sil
+					selectedRow.Row.Delete();
+
+					// Değişiklikleri kaydet
+					this.tbl_OgrenciTableAdapter.Update(this.okulDBDataSet.Tbl_Ogrenci);
+				}
+
+			}
 		}
 	}
 }
