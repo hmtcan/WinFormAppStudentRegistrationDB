@@ -3,4 +3,4 @@
   
 * Entity Framework was used with the Database First approach to create the database, and then a connection was established using the connection method. The listing operation was performed using a datagridview. Includes normalization
 
-<a href="https://ibb.co/QMv9Tkg"><img src="https://i.ibb.co/5LhTSk0/Student-Registration-DB.png" alt="Student-Registration-DB" border="0"></a>
+![Student-Registration-DB](https://github.com/hmtcan/WinFormAppStudentRegistrationDB/assets/100353650/6250d06f-3484-4f0a-956a-c838cfd91c96)
